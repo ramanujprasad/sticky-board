@@ -17,9 +17,10 @@
   <div class="note-content">
     <!-- Description for notes area -->
     <textarea
+      #description
       id="description"
       class="note-item__text"
-      (keypress)="onChangeDescription($event)"
+      (keypress)="onChangeDescription(description.value)"
       placeholder="Enter your text here..."
       >{{ stickyData?.description }}</textarea
     >
