@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --code-coverage"
+    "test": "ng test --code-coverage",
+    "clean": "rm -rf node_modules/ && rm -rf package-lock.json",
+    "deploy": "ng build --prod --base-href https://ramanujprasad.github.io/sticky-board/ && ngh --dir=dist/sticky-board"
   },
   "private": true,
   "dependencies": {

@@ -3,7 +3,7 @@ A Scrum Board (similar to Miro Board) to work with widgets (stickies).
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## URL
-[Sticky Board Application Live URL]()
+[Sticky Board Application Live URL](https://ramanujprasad.github.io/sticky-board/)
 
 ## Development server
 
