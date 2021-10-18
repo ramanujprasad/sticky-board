@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <span>Sticky Board</span>
+
+  <!-- This fills the remaining space of the current row -->
+  <span class="spacer"></span>
+
+  <!-- Refresh icon -->
+  <mat-icon
+    class="icon"
+    id="refresh"
+    mat-list-icon
+    matTooltip="Refress the page"
+    (click)="reloadPage()"
+    >refresh</mat-icon
+  >
+  <!-- Delete icon -->
+  <mat-icon
+    class="icon"
+    id="delete"
+    mat-list-icon
+    matTooltip="Delete all stickies"
+    (click)="deleteStickies()"
+    >delete</mat-icon
+  >
+</mat-toolbar>

@@ -1,0 +1,33 @@
+<div class="note-board">
+  <!-- Add new sticky -->
+  <mat-icon
+    id="addSticky"
+    class="add-icon"
+    mat-list-icon
+    matTooltip="Add a sticky"
+    (click)="addSticky()"
+    >add</mat-icon
+  >
+  <app-sticky
+    *ngFor="let sticky of savedStickies; let i = index"
+    [stickyData]="sticky"
+    [globalZindex]="zIndex"
+    (zIndexChanged)="onZindexChanged($event)"
+    (stickyChanged)="onStickyChanged($event)"
+  ></app-sticky>
+</div>
+<div class="row">
+  <!-- Empty sticky container area to land default stickies when created -->
+  <div class="col-md-3 col-sm-6">
+    <app-sticky-container></app-sticky-container>
+  </div>
+  <!-- sticky container area for START, STOP, CONTINUE section -->
+  <div
+    class="col-md-3 col-sm-6"
+    *ngFor="let stickyContainer of stickyContainers"
+  >
+    <app-sticky-container
+      [stickyContainer]="stickyContainer"
+    ></app-sticky-container>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div
+  class="sticky-container"
+  [style.background]="stickyContainer && stickyContainer.color"
+>
+  <p
+    class="sticky-container__name"
+    id="{{ stickyContainer?.id }}"
+    *ngIf="stickyContainer?.name"
+  >
+    {{ stickyContainer.name }}
+  </p>
+</div>

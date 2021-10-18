@@ -1,0 +1,42 @@
+<div
+  cdkDrag
+  #sticky
+  id="{{ stickyData?.id }}"
+  class="card note-item"
+  [style.background]="stickyData && stickyData.color"
+  [style.transform]="stickyData && stickyData.position"
+  [style.zIndex]="localZindex || (stickyData && stickyData.zIndex)"
+  (click)="onFocus()"
+>
+  <!-- Header for drag handler -->
+  <div
+    class="note-item__header"
+    cdkDragHandle
+    (mouseup)="onChangePosition($event)"
+  ></div>
+  <div class="note-content">
+    <!-- Description for notes area -->
+    <textarea
+      id="description"
+      class="note-item__text"
+      (keypress)="onChangeDescription($event)"
+      placeholder="Enter your text here..."
+      >{{ stickyData?.description }}</textarea
+    >
+    <div class="note-item__footer">
+      <!-- Color change for sticky icon and feature -->
+      <div
+        class="note-item__color"
+        [(colorPicker)]="stickyData && stickyData.color"
+        [cpOKButton]="true"
+        (colorPickerSelect)="onColorChange($event)"
+      >
+        <mat-icon mat-list-icon matTooltip="Select color">color_lens</mat-icon>
+      </div>
+      <!-- Delete sticky icon -->
+      <div class="note-item__icon" (click)="onDeleteSticky()">
+        <mat-icon mat-list-icon matTooltip="Delete sticky">close</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>
