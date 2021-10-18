@@ -42,16 +42,17 @@ export class StickyComponent {
   }
   /**
    * change description for sticky handler
-   *  @param  {string} value
+   *  @param  {KeyboardEvent} event
    */
-  public onChangeDescription(value: string): void {
+  public onChangeDescription(event: KeyboardEvent): void {
+    const target = event.target as HTMLTextAreaElement;
     if (this.timeoutHandle) {
       clearTimeout(this.timeoutHandle);
     }
     this.timeoutHandle = setTimeout(() => {
       this.stickyChanged.emit({
         ...this.stickyData,
-        description: value,
+        description: target.value,
         isFocus: true,
         zIndex: this.localZindex
       });
