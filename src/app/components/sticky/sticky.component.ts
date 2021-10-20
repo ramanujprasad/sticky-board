@@ -57,7 +57,7 @@ export class StickyComponent {
         zIndex: this.localZindex
       });
       this.localZindex = 0;
-    }, 500);
+    }, 1000);
   }
   /**
    * change position of the sticky handler
