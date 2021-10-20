@@ -14,16 +14,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 This application covers following feature:
 
 1. New stickies can be created by clicking on **+** icon on the top-left side of board.
-2. **Dragg & Dropp** - Stickies can be dragged and dropped anywhere on the board. It's position gets saved automatically.
-3. **Stickies description** - It can be added at the place of 'Enter your text here...'. Description gets saved automatically as soon as you move to other field. 
+2. **Drag & Drop** - Stickies can be dragged and dropped anywhere on the board. Use sticky's header for dragging to other places. It's position gets saved automatically.
+3. **Stickies description** - It can be added at the place of placeholder 'Enter your text here...'. Description gets saved automatically as soon as you move to other field. 
 4. **Stickies color** - It can be changed by clicking the bottom-left icon of the sticky. After choosing the color, click on 'OK' button to save the changes.
-5. Stickies can be **deleted** by clicking the bottom-right icon of the sticky.
+5. Stickies can be **deleted** by clicking the bottom-right cross icon of the sticky.
 6. The newer created stickie lies higher on the board. Stickies has possibility to drag stickies on top of each other and the order is maintained.
-7. On focus of bottom sticky, It should appears on top of everyone. It can be edited easily after that. 
+7. On focus of bottom sticky, It appears on top of all stickies. It is more convenient to edit sticky if it's on the top. 
 8. Page can be refreshed by clicking on **refresh** icon on the top-right header. 
-9. All created sticky and application data can be deleted by clicking on **delete** icon on the top-right header. 
+9. All created stickies and application data can be deleted by clicking on **delete** icon on the top-right header. 
 10. Application is fully responsive on difference-difference resolution.
-11. Unit testes are written for most of the scenarios
+11. Unit testes are written for most of the scenarios. Refer the screenshot below for details.
 
 
 ## Code Structure
